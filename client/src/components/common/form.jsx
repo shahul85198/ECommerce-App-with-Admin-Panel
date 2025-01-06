@@ -1,14 +1,14 @@
-import { Input } from "../ui/input";
-import { Label } from "../ui/label";
+import { Input } from '../ui/input';
+import { Label } from '../ui/label';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "../ui/select";
-import { Textarea } from "../ui/textarea";
-import { Button } from "../ui/button";
+} from '../ui/select';
+import { Textarea } from '../ui/textarea';
+import { Button } from '../ui/button';
 
 function CommonForm({
   formControls,
@@ -20,10 +20,10 @@ function CommonForm({
 }) {
   function renderInputsByComponentType(getControlItem) {
     let element = null;
-    const value = formData[getControlItem.name] || "";
+    const value = formData[getControlItem.name] || '';
 
     switch (getControlItem.componentType) {
-      case "input":
+      case 'input':
         element = (
           <Input
             name={getControlItem.name}
@@ -41,7 +41,7 @@ function CommonForm({
         );
 
         break;
-      case "select":
+      case 'select':
         element = (
           <Select
             onValueChange={(value) =>
@@ -68,7 +68,7 @@ function CommonForm({
         );
 
         break;
-      case "textarea":
+      case 'textarea':
         element = (
           <Textarea
             name={getControlItem.name}
@@ -119,7 +119,7 @@ function CommonForm({
         ))}
       </div>
       <Button disabled={isBtnDisabled} type="submit" className="mt-2 w-full">
-        {buttonText || "Submit"}
+        {buttonText || 'Submit'}
       </Button>
     </form>
   );

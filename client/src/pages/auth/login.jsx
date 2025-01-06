@@ -6,14 +6,11 @@ import { Link } from 'react-router-dom';
 const initialState = {
   email: '',
   password: '',
-}
+};
 
 function AuthLogin() {
-
   const [formData, setFormData] = useState(initialState);
 
-
-    
   return (
     <div className="mx-auto w-full max-w-md space-y-6">
       <div className="text-center">
@@ -32,7 +29,7 @@ function AuthLogin() {
       </div>
       <CommonForm
         formControls={loginFormControls}
-        buttonText={"Sign In"}
+        buttonText={'Sign In'}
         formData={formData}
         setFormData={setFormData}
         onSubmit={onSubmit}

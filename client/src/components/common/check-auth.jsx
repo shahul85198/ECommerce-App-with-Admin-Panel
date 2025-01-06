@@ -1,4 +1,4 @@
-const { useLocation, Navigate } = require('react-router-dom');
+import { useLocation, Navigate } from 'react-router-dom';
 
 function CheckAuth({ isAuthenticated, user, children }) {
   const location = useLocation();
@@ -41,7 +41,7 @@ function CheckAuth({ isAuthenticated, user, children }) {
     return <Navigate to="/admin/dashboard" />;
   }
 
-  return <>children</>;
+  return <>{children}</>;
 }
 
 export default CheckAuth;
