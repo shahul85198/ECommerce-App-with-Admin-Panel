@@ -14,13 +14,13 @@ mongoose
   .then(() => console.log("Connected to MongoDB"))
   .catch((err) => console.log(err));
 
-const app = express();
-const PORT = process.env.PORT || 5173;
+  const app = express();
+  const PORT = process.env.PORT || 5173;
 
 app.use(
   cors({
     origin: "http://localhost:5173",
-    methods: ["GET", "PORT", "DELETE", "PUT"],
+    methods: ["GET", "POST", "DELETE", "PUT"],
     allowedHeaders: [
       "Content-Type",
       "Authorization",
@@ -28,8 +28,8 @@ app.use(
       "Expires",
       "Pragma",
     ],
-    Credentials: true,
-  }),
+    credentials: true,
+  })
 );
 
 app.use(cookieParser());

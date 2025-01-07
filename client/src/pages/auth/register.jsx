@@ -8,9 +8,9 @@ import { useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 
 const initialState = {
-  username: '',
-  email: '',
-  password: '',
+  userName: "",
+  email: "",
+  password: "",
 };
 
 function AuthRegister() {
@@ -26,11 +26,11 @@ function AuthRegister() {
         toast({
           title: data?.payload?.message,
         });
-        navigate('/auth/login');
+        navigate("/auth/login");
       } else {
         toast({
           title: data?.payload?.message,
-          variant: 'destructive',
+          variant: "destructive",
         });
       }
     });
@@ -56,7 +56,7 @@ function AuthRegister() {
       </div>
       <CommonForm
         formControls={registerFormControls}
-        buttonText={'Sign Up'}
+        buttonText={"Sign Up"}
         formData={formData}
         setFormData={setFormData}
         onSubmit={onSubmit}
